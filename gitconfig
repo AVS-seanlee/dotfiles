@@ -1,0 +1,49 @@
+[user]
+	name = AVS-seanlee
+	email = sean.lee@avsquad.com
+[color]
+	ui = auto
+[color "branch"]
+     current = yellow reverse
+     local = yellow
+     remote = green
+[color "diff"]
+     meta = yellow bold
+     frag = magenta bold
+     old = red bold
+     new = green bold
+[color "status"]
+     added = yellow
+     changed = green
+     untracked = cyan
+[core]
+	autocrlf = input
+	safecrlf = true
+	editor = subl -w
+[credential]
+	helper = osxkeychain
+[mergetool]
+	keepBackup = true
+	prompt = false
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[diff]
+	tool = Kaleidoscope
+[difftool]
+	prompt = false
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
+[merge]
+	tool = Kaleidoscope
+[push]
+	default = simple
+[branch]
+	autosetupmerge = true
+[help]
+	autocorrect = 1
+[rerere]
+	enabled = 1
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f

@@ -36,6 +36,7 @@ alias showfiles='defaults write com.apple.finder AppleShowAllFiles YES; killall 
 alias hidefiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 alias messageon='sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "i wanna be the very best like no one ever was"'
 alias messageoff='sudo defaults delete /Library/Preferences/com.apple.loginwindow LoginwindowText'
+alias flushdns='sudo killall -HUP mDNSResponder'          # reset dns shortcut
 
 
 #   ------------------------------------------
